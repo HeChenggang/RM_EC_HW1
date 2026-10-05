@@ -1,0 +1,4 @@
+D:/RM/Code/project/RM_EC_HW1/Core/Src/main.c:66:5:main	8	static
+D:/RM/Code/project/RM_EC_HW1/Core/Src/main.c:112:6:SystemClock_Config	72	static
+D:/RM/Code/project/RM_EC_HW1/Core/Src/main.c:153:6:Error_Handler	4	static,ignoring_inline_asm
+D:/RM/Code/project/RM_EC_HW1/Core/Src/main.c:171:6:assert_failed	16	static

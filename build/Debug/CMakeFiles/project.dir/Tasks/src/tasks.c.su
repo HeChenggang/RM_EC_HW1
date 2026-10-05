@@ -1,0 +1,2 @@
+D:/RM/Code/project/RM_EC_HW1/Tasks/src/tasks.c:11:6:Tasks_Init	8	static
+D:/RM/Code/project/RM_EC_HW1/Tasks/src/tasks.c:38:6:HAL_TIM_PeriodElapsedCallback	16	static
