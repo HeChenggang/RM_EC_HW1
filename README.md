@@ -15,6 +15,50 @@ STM32F103 GPIO 定时器与独立看门狗
 | IWDG | LSI 时钟；Prescaler 64；Reload 1249 |
 | 构建与观察 | CMake Debug；Ozone V3.50 的 Watched Data |
 
+### 工程目录结构
+
+```text
+RM_EC_HW1/
+├── Core/                          CubeMX 生成代码
+│   ├── Inc/
+│   │   ├── main.h
+│   │   ├── gpio.h                 第一题 PC13 输出
+│   │   ├── tim.h                  第二题 TIM2 更新中断
+│   │   ├── iwdg.h                 第三题独立看门狗
+│   │   ├── stm32f1xx_it.h
+│   │   └── stm32f1xx_hal_conf.h
+│   └── Src/
+│       ├── main.c                 外设初始化并调用 Tasks_Init()
+│       ├── gpio.c
+│       ├── tim.c
+│       ├── iwdg.c
+│       ├── stm32f1xx_it.c         中断向量实现
+│       ├── stm32f1xx_hal_msp.c
+│       ├── syscalls.c / sysmem.c
+│       └── system_stm32f1xx.c
+├── Tasks/                         业务代码
+│   ├── inc/tasks.h                对外接口 Tasks_Init()
+│   └── src/tasks.c                tick 计数与定时器回调
+├── Drivers/                       ST HAL 驱动与 CMSIS
+│   ├── STM32F1xx_HAL_Driver/      Inc/ 与 Src/
+│   └── CMSIS/                     Device/ 与 Include/
+├── docs/                          实验截图与照片
+│   ├── question1/灯亮照片.jpg
+│   ├── question2/question2_01.png ~ _06.png
+│   └── question3/question3_01.png ~ _06.png
+├── cmake/
+│   ├── gcc-arm-none-eabi.cmake    工具链文件
+│   ├── starm-clang.cmake
+│   └── stm32cubemx/CMakeLists.txt
+├── build/Debug/                   构建目录（project.elf/.hex/.bin）
+├── startup_stm32f103xb.s          启动文件
+├── STM32F103xx_FLASH.ld           链接脚本
+├── RM_EC_HW1.ioc                  CubeMX 工程文件
+├── CMakeLists.txt                 构建脚本，用户目录为 Tasks
+├── CMakePresets.json              Debug / Release 预设
+└── README.md
+```
+
 业务代码位于 `Tasks/src/tasks.c`，接口位于 `Tasks/inc/tasks.h`。`main.c` 仅在 `USER CODE` 区包含 `tasks.h`，并在外设初始化后调用 `Tasks_Init()`；`while (1)` 保持为空。定时器回调只在 Tasks 中实现一份。当前工程保存的是第三题版本，同时保留了第二题版本的注释。
 
 ## 二 第一题 GPIO 输出
