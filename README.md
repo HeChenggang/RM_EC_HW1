@@ -160,29 +160,9 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 
 ## 附录 B 第二题连续监视截图
 
-![图 B1 第二题 Ozone 运行界面](./docs/question2/question2_01.png)
-
-![图 B2 第二题 Ozone 运行界面](./docs/question2/question2_02.png)
-
-![图 B3 第二题 Ozone 运行界面](./docs/question2/question2_03.png)
-
-![图 B4 第二题 Ozone 运行界面](./docs/question2/question2_04.png)
-
-![图 B5 第二题 Ozone 运行界面](./docs/question2/question2_05.png)
-
-![图 B6 第二题 Ozone 运行界面](./docs/question2/question2_06.png)
+![图 B 第二题 Ozone 运行界面](./docs/question2/Q2_timeline.png)
 
 
 ## 附录 C 第三题连续监视截图
 
-![图 C1 第三题 Ozone 运行界面](./docs/question3/question3_01.png)
-
-![图 C2 第三题 Ozone 运行界面](./docs/question3/question3_02.png)
-
-![图 C3 第三题 Ozone 运行界面](./docs/question3/question3_03.png)
-
-![图 C4 第三题 Ozone 运行界面](./docs/question3/question3_04.png)
-
-![图 C5 第三题 Ozone 运行界面](./docs/question3/question3_05.png)
-
-![图 C6 第三题 Ozone 运行界面](./docs/question3/question3_06.png)
+![图 C 第三题 Ozone 运行界面](./docs/question3/Q3_timline.png)
